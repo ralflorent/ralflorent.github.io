@@ -1,0 +1,23 @@
+{
+  "name": "css-grid",
+  "version": "1.0.0",
+  "description": "Introduction to CSS grid",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp browser-sync",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://rflorent@colab.mpi-bremen.de/stash/scm/rp/css-grid.git"
+  },
+  "keywords": ["css", "grid"],
+  "author": {
+    "name": "Ralph Florent",
+    "email": "rflorent@mpi-bremen.de"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
+  }
+}
