@@ -1,3 +1,41 @@
-#grid-container {
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+
+/* Reset default css elements */
+body {
+    margin: 0;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    float: right;
+}
+
+ul li {
+    display: inline;
+    padding: 15px;
+}
+
+ul li a {
+    color: #fff;
+}
+
+#logo {
+    padding: 15px;
+    margin-left: 15px;
+    background-color: #eee;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+}
+
+header {
+    background-color: #414141;
+
     display: grid;
+    grid-template-columns: fit-content(20%) auto;
 }
