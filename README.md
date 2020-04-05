@@ -1,13 +1,14 @@
-# Introduction to CSS Grid
+# Personal website
 
-## Getting Started
+## Description
 
-Set up a development environment by installing the following packages:
-* browser-sync
-* gulp
+This website is intended to facilitate the reading of the documentation of some
+projects on [@ralflorent](https://github.com/ralflorent)'s GitHub account.
 
-PS: run command `npm install --save-dev browser-sync gulp`
+## Author
 
-## Conceptual understanding
+Developed by [Ralph Florent](https://github.com/ralflorent).
 
-## Tools
+## License
+
+The underlying content of this website is licensed under [MIT](LICENSE).
