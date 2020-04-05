@@ -1,21 +1,22 @@
 {
-  "name": "css-grid",
+  "name": "ralflorent.github.io",
   "version": "1.0.0",
-  "description": "Introduction to CSS grid",
+  "description": "Personal website",
   "scripts": {
     "start": "./node_modules/.bin/gulp browser-sync",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Info: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "https://rflorent@colab.mpi-bremen.de/stash/scm/rp/css-grid.git"
+    "url": "https://github.com/ralflorent/ralflorent.github.io.git"
   },
-  "keywords": ["css", "grid"],
+  "keywords": ["website", "posts", "docs", "articles"],
   "author": {
     "name": "Ralph Florent",
-    "email": "rflorent@mpi-bremen.de"
+    "email": "ralflornt@gmail.com",
+    "url": "https://ralflorent.github.io"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2"
