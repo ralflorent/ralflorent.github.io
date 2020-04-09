@@ -92,8 +92,8 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[hash].css',
-            chunkFilename: '[id].[hash].css',
+            filename: '[name].css',
+            // chunkFilename: '[id].[hash].css',
         }),
         new HtmlWebpackPlugin({
             title: `Ralph Florent | Home`,

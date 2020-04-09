@@ -20,11 +20,19 @@ body {
     font-weight: normal;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Commonalities */
 .panel {
   border: 1px solid #eee;
   padding: 0.5rem;
-  margin: 0.75rem;
+  margin: 0.5rem;
 }
 
 /* Font size */

@@ -202,10 +202,11 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = __webpack_require__(0);
 const ReactDOM = __webpack_require__(4);
+__webpack_require__(8);
 const App = () => {
-    return (React.createElement("div", { style: { textAlign: 'center' } },
-        React.createElement("h1", null, "Ralph Florent's Personal Website"),
-        React.createElement("h1", null, "Under construction...")));
+    return (React.createElement("div", { style: { textAlign: "center" } },
+        React.createElement("h3", { className: "large" }, "Ralph Florent's Personal Website"),
+        React.createElement("p", { className: "extra-large" }, "Under construction...")));
 };
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
 
@@ -614,6 +615,12 @@ exports.unstable_getCurrentPriorityLevel=function(){return R};exports.unstable_g
 exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();if("object"===typeof c&&null!==c){var e=c.delay;e="number"===typeof e&&0<e?d+e:d;c="number"===typeof c.timeout?c.timeout:Y(a)}else c=Y(a),e=d;c=e+c;a={id:P++,callback:b,priorityLevel:a,startTime:e,expirationTime:c,sortIndex:-1};e>d?(a.sortIndex=e,J(O,a),null===L(N)&&a===L(O)&&(U?h():U=!0,g(W,e-d))):(a.sortIndex=c,J(N,a),T||S||(T=!0,f(X)));return a};
 exports.unstable_shouldYield=function(){var a=exports.unstable_now();V(a);var b=L(N);return b!==Q&&null!==Q&&null!==b&&null!==b.callback&&b.startTime<=a&&b.expirationTime<Q.expirationTime||k()};exports.unstable_wrapCallback=function(a){var b=R;return function(){var c=R;R=b;try{return a.apply(this,arguments)}finally{R=c}}};
 
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ })
 /******/ ]);
