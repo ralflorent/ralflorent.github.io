@@ -7,11 +7,20 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
+import './styles/styles.scss'
+
 const App = () => {
+
     return (
-        <div style={{textAlign: 'center'}}>
-            <h1>Ralph Florent's Personal Website</h1>
-            <h1>Under construction...</h1>
+        <div className="selected-theme common">
+            <div className="panel">
+                <h3>Font Size</h3>
+                <p className="extra-small">Extra Small Text</p>
+                <p className="small">Small Text</p>
+                <p>Medium Text</p>
+                <p className="large">Large Text</p>
+                <p className="extra-large">Extra Large Text</p>
+            </div>
         </div>
     )
 }

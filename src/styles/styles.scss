@@ -1,0 +1,24 @@
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap|Open+Sans+Condensed:300,300i,700&display=swap|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,700,700i&display=swap');
+
+@import 'light';
+
+/* Commonalities */
+.selected-theme {
+  color: $color-font-basic;
+  background-color: $color-bg-basic;
+}
+
+.common {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.panel {
+  max-height: 300px;
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  margin: 0.75rem;
+}

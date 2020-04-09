@@ -57,17 +57,22 @@ module.exports = {
                 use: 'source-map-loader'
             },
             {
-                test: /\.css$/,
+                test: /\.(sa|sc|c)ss$/,
                 /* Loaders are evaluated/executed from right to left (or from
                  * bottom to top) and otherwise if `Pitching` mode is enforced.
                  */
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: { hmr: true, },
+                        options: {
+                            hmr: true,
+                        },
                     },
                     {
                         loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader',
                     }
                 ]
             },

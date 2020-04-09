@@ -68,6 +68,23 @@ module.exports = {
                 exclude: /node_modules/,
                 use: 'source-map-loader'
             },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                /* Loaders are evaluated/executed from right to left (or from
+                 * bottom to top) and otherwise if `Pitching` mode is enforced.
+                 */
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
+            },
         ]
     },
 
