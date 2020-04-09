@@ -5,13 +5,10 @@
 $font-size-base:        1rem;
 $line-height-base:      1.2;
 
-body, html {
-    height: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     color: $color-font-basic;
     background-color: $color-bg-basic;
     font-size: $font-size-base;
