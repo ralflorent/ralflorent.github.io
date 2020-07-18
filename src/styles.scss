@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,700,700i&display=swap");
+
+/* Core */
+
+:root {
+  --color-font:#3f3f3f;
+  --color-background:#fefefe;
+  --color-primary:#f08a07;
+  --color-secondary:#f7f7af;
+}
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+/* Layout */
+
+#root {
+  color: var(--color-font);
+  background-color: var(--color-background);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  display: grid;
+  grid-template-areas: "navbar" "main-content" "footer";
+  grid-template-rows: fit-content(20%) auto 3rem;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.main-content {
+  grid-area: main-content;
+  height: 90%;
+  margin: 0.5rem;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Navigation */
+
+.menu {
+  padding: 0.5rem;
+  text-align: center;
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0.5em;
+      display: inline;
+
+      a {
+        &:hover {
+          text-decoration: none;
+          color: #222;
+        }
+
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* Main content */
+
+#bpmn-container {
+  height: inherit;
+  width: inherit;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px dashed #555;
+  border-radius: 5px;
+}
+
+.repos {
+  > {
+    input {
+      padding: 0.225em;
+      height: 1.5em;
+      line-height: 1.5;
+      border-radius: 5px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        border-top: 2px solid var(--color-secondary);
+
+        &:last-child {
+          border-bottom: 2px solid var(--color-secondary);
+        }
+
+        p {
+          &.title {
+            font-size: 1.1em;
+            font-weight: 600;
+          }
+
+          &.description {
+            font-size: 0.9em;
+            color: rgb(109, 109, 109);
+          }
+        }
+      }
+    }
+  }
+
+  padding: 0.5rem;
+}
+
+/* Font size */
+
+small, .small {
+  font-size: 0.8rem;
+
+  /* 20% decrease */
+}
+
+.extra-small {
+  font-size: 0.5rem;
+
+  /* 50% decrease */
+}
+
+.large {
+  font-size: 1.2rem;
+
+  /* 20% increase */
+}
+
+.extra-large {
+  font-size: 1.5rem;
+
+  /* 50% increase */
+}
