@@ -1,1 +1,144 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><base href="/"/><title>Ralph Florent | Home</title><link href="build/bundle.css" rel="stylesheet"></head><body><div id="root"></div><script src="build/bundle.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Ralph Florent's Personal Website</title>
+      <base href="/">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="title" content="Ralph Florent's Personal Website">
+      <meta name="url" content="https://ralflorent.com/home">
+      <meta name="description" content="Ralph Florent is an entrepreneur and engineer who enjoys bridging the web stack technologies with the data science world.">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,700,700i&display=swap">
+      <link rel="stylesheet" href="https://spin.js.org/spin.css">
+      <!-- Spinner -->
+      <script src="https://spin.js.org/spin.umd.js"></script>
+      <!-- Google Tag Manager -->
+      <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+             'gtm.start':
+                 new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+             j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+         })(window, document, 'script', 'dataLayer', 'GTM-PNGBX4R');
+      </script>
+      <!-- End Google Tag Manager -->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131799063-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'UA-131799063-1');
+      </script>
+      <!-- End Global site tag (gtag.js) - Google Analytics -->
+      <style>
+         :root {
+            --color-font:#3f3f3f;
+            --color-background:#fefefe;
+            --color-primary:#007bff;
+         }
+         body, html, #root {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+         }
+         a {
+            text-decoration: none;
+            color: var(--color-primary);
+         }
+         /* Layout */
+         #root {
+            color: var(--color-font);
+            background-color: var(--color-background);
+            font-family: "Montserrat", sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            text-align: center;
+            display: grid;
+            grid-template-areas: "title" "main-content" "footer";
+            grid-template-rows: fit-content(20%) auto 3rem;
+            align-items: center;
+         }
+         .title {
+            grid-area: title;
+         }
+         .main-content {
+            grid-area: main-content;
+            margin: 0.5rem;
+         }
+         .footer {
+            grid-area: footer;
+         }
+         small, .small {
+            font-size: 0.8rem; /* 20% decrease */
+         }
+         .extra-small {
+            font-size: 0.5rem; /* 50% decrease */
+         }
+         .large {
+            font-size: 1.2rem; /* 20% increase */
+         }
+         .extra-large {
+            font-size: 1.5rem; /* 50% increase */
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript>
+         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNGBX4R" height="0"
+            width="0" style="display:none;visibility:hidden">
+         </iframe>
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
+      <div id="root">
+         <h1 class="title">
+            Ralph Florent's Personal Website
+         </h1>
+         <div class="main-content">
+            <div id="spinner-content"></div>
+            <p class="extra-large">Redirecting to <a href="https://ralflorent.com">ralflorent.com</a>...</p>
+         </div>
+         <div class="footer small">
+            <hr />
+            <a
+               href="https://github.com/ralflorent"
+               rel="noopener noreferrer"
+               target="_blank"
+               >
+            &copy; 2020 Ralph Florent
+            </a>
+         </div>
+      </div>
+      <script>
+         var opts = {
+             lines: 15, // The number of lines to draw
+             length: 38, // The length of each line
+             width: 15, // The line thickness
+             radius: 30, // The radius of the inner circle
+             scale: 1, // Scales overall size of the spinner
+             corners: 1, // Corner roundness (0..1)
+             speed: 1, // Rounds per second
+             rotate: 0, // The rotation offset
+             animation: 'spinner-line-shrink', // The CSS animation name for the lines
+             direction: 1, // 1: clockwise, -1: counterclockwise
+             color: ['#0ff', '#f0f', '#ff0'], // CSS color or array of colors
+             fadeColor: 'transparent', // CSS color or array of colors
+             top: '35%', // Top position relative to parent
+             left: '50%', // Left position relative to parent
+             shadow: '0 0 1px transparent', // Box-shadow for the lines
+             zIndex: 100, // The z-index (defaults to 2e9)
+             className: 'spinner', // The CSS class to assign to the spinner
+             position: 'absolute', // Element positioning
+         };
+         const target = document.getElementById('spinner-content');
+         const spinner = new Spin.Spinner(opts).spin(target);
+         setTimeout(() => {
+            window.location.href = 'https://ralflorent.com';
+            spinner.stop();
+         }, 3000);
+      </script>
+   </body>
+</html>
