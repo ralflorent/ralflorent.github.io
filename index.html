@@ -99,7 +99,11 @@
          </h1>
          <div class="main-content">
             <div id="spinner-content"></div>
-            <p class="extra-large">Redirecting to <a href="https://ralflorent.com">ralflorent.com</a>...</p>
+            <p class="extra-large">
+                Redirecting to
+                <a href="https://ralflorent.com">ralflorent.com</a>
+                in <span id="timer">5</span> sec...
+            </p>
          </div>
          <div class="footer small">
             <hr />
@@ -113,32 +117,41 @@
          </div>
       </div>
       <script>
-         var opts = {
-             lines: 15, // The number of lines to draw
-             length: 38, // The length of each line
-             width: 15, // The line thickness
-             radius: 30, // The radius of the inner circle
-             scale: 1, // Scales overall size of the spinner
-             corners: 1, // Corner roundness (0..1)
-             speed: 1, // Rounds per second
-             rotate: 0, // The rotation offset
-             animation: 'spinner-line-shrink', // The CSS animation name for the lines
-             direction: 1, // 1: clockwise, -1: counterclockwise
-             color: ['#0ff', '#f0f', '#ff0'], // CSS color or array of colors
-             fadeColor: 'transparent', // CSS color or array of colors
-             top: '35%', // Top position relative to parent
-             left: '50%', // Left position relative to parent
-             shadow: '0 0 1px transparent', // Box-shadow for the lines
-             zIndex: 100, // The z-index (defaults to 2e9)
-             className: 'spinner', // The CSS class to assign to the spinner
-             position: 'absolute', // Element positioning
-         };
-         const target = document.getElementById('spinner-content');
-         const spinner = new Spin.Spinner(opts).spin(target);
-         setTimeout(() => {
-            window.location.href = 'https://ralflorent.com';
-            spinner.stop();
-         }, 3000);
+        var opts = {
+            lines: 15, // The number of lines to draw
+            length: 38, // The length of each line
+            width: 15, // The line thickness
+            radius: 30, // The radius of the inner circle
+            scale: 1, // Scales overall size of the spinner
+            corners: 1, // Corner roundness (0..1)
+            speed: 1, // Rounds per second
+            rotate: 0, // The rotation offset
+            animation: 'spinner-line-shrink', // The CSS animation name for the lines
+            direction: 1, // 1: clockwise, -1: counterclockwise
+            color: ['#0ff', '#f0f', '#ff0'], // CSS color or array of colors
+            fadeColor: 'transparent', // CSS color or array of colors
+            top: '35%', // Top position relative to parent
+            left: '50%', // Left position relative to parent
+            shadow: '0 0 1px transparent', // Box-shadow for the lines
+            zIndex: 100, // The z-index (defaults to 2e9)
+            className: 'spinner', // The CSS class to assign to the spinner
+            position: 'absolute', // Element positioning
+        };
+        const spinnerEl = document.getElementById('spinner-content');
+        const spinner = new Spin.Spinner(opts).spin(spinnerEl);
+
+        const timerEl = document.getElementById('timer');
+        let timer = 5;
+
+        const interval = setInterval(() => {
+            timerEl.innerHTML = timer;
+            timer--;
+            if (timer < 0) {
+                clearInterval(interval);
+                window.location.href = 'https://ralflorent.com';
+                spinner.stop();
+            }
+         }, 1000);
       </script>
    </body>
 </html>
